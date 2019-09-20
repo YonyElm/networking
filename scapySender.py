@@ -3,7 +3,7 @@ from scapy.all import *
 import time
 import os
 
-givenDestIp = os.environ.get("SCAPY_IP", "127.0.0.1")
+givenDestIp = os.environ.get("SCAPY_IP", "0.0.0.0")
 givenPort = os.environ.get("SCAPY_PORT", 3500)
 
 layer3 = IP(dst=givenDestIp)
