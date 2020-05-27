@@ -4,7 +4,7 @@ WORKDIR /app
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -qq iputils-ping net-tools apt-utils vim
-RUN apt-get install -qq tcpdump tcpreplay traceroute curl speedometer nuttcp iperf3
+RUN apt-get install -qq tcpdump tcpreplay traceroute curl speedometer nuttcp iperf3 iproute2 ifmetric
 RUN python3 -m pip install flask scapy tcconfig speedtest-cli
 
 ADD scapySender.py /app/
